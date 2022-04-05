@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main{
+  public static void main(String args[]){
+    int contador = 0;
+    Scanner ler = new Scanner(System.in);
+    System.out.println("Digite a quantidade n de numeros a ser comparada");
+    int n = ler.nextInt();
+    for(int x=0;x<n;x++) {
+        System.out.println("Digite o numero da posicao" + x);
+      int numeroatual = ler.nextInt();
+      if (numeroatual < 0) {
+          contador = contador + 1;
+      }
+      
+      
+    
+      
+    }
+    System.out.println("O numero de numeros negativos eh: "+ contador);
+  }
+}
