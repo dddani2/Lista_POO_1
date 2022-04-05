@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main{
+  public static void main(String args[]){
+      Scanner teclado = new Scanner(System.in);
+      System.out.println("Digite o numero");
+      int numero = teclado.nextInt();
+      int fatorial = 1;
+      if (numero >0) {
+          for(int n=2;n<=numero;n++) {
+              fatorial *= n;
+          }
+          System.out.println("O fatorial vale: "+fatorial);
+    } else {
+    System.out.println("Uma mensagem");
+    
+}
+    
+  }
+}
