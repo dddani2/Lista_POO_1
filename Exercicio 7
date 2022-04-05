@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Digite o numero de funcionarios");
+        
+        int numerofuncionarios = teclado.nextInt();
+        int pessima = 0;
+        int ruim = 0;
+        int boa = 0;
+        int otima = 0;
+        
+        for(int x=0;x<numerofuncionarios;x++) {
+        System.out.println("Digite uma nota de 0 a 100");
+        int nota = teclado.nextInt();
+        
+        if(nota>=0 && nota<= 25) {
+            pessima = pessima+1;
+        }
+        if(nota>25 && nota<=50){
+            ruim = ruim+1;
+        }
+        if(nota >50 && nota <=75){
+            boa = boa+1;
+        }
+        if(nota >75 && nota <=100){
+            otima = otima+1;
+        }
+        if(nota <0 || nota>100){
+            break;
+        }
+        
+        }
+        float total = pessima+ruim+boa+otima;
+        float p100pessima = (pessima/total)*100;
+        float p100ruim = (ruim/total)*100;
+        float p100boa = (boa/total)*100;
+        float p100otima = (otima/total)*100;
+        System.out.println(p100pessima+"% dos funcionarios deram uma nota pessima");
+        System.out.println(p100ruim+"% dos funcionarios deram uma nota ruim");
+        System.out.println(p100boa+"% dos funcionarios deram uma nota boa");
+        System.out.println(p100otima+"% dos funcionarios deram uma nota otima");
+    }
+    
+}
