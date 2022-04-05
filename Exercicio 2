@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	   int maior = 0;
+       Scanner teclado = new Scanner(System.in);
+       System.out.print("Entre com o valor de R: ");
+       int R = teclado.nextInt();
+       if(R>maior) {
+           maior = R;
+       }
+       System.out.print("Entre com o valor de S: ");
+       int S = teclado.nextInt();
+       if(S>maior) {
+           maior = S;
+       }
+       System.out.print("Entre com o valor de T: ");
+       int T = teclado.nextInt();
+       if(T>maior) {
+           maior = T;
+       }
+
+
+       System.out.println("O maior valor eh: " + maior);
+	    
+
+	}
+}
